@@ -65,6 +65,26 @@
             bindings = <&kp ENTER>;
             key-positions = <21 20>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 1>;
+        };
+
+        Lparen {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <25 26>;
+        };
+
+        Rparen {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <34 33>;
+        };
+
+        btclear {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <1 29>;
+        };
     };
 
     macros {
@@ -118,7 +138,7 @@
             bindings = <
 &none  &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp LS(EQUAL)  &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES           &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)  &none
 &none  &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV             &kp SLASH                 &URL                       &none
-&none  &bt BT_SEL 3     &bt BT_SEL 2       &bt BT_SEL 1   &bt BT_SEL 0      &bt BT_CLR         &kp PIPE    &URL                &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH              &none
+&none  &bt BT_SEL 2     &bt BT_SEL 1       &bt BT_SEL 0   &bt BT_PRV        &bt BT_NXT         &kp PIPE    &URL                &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH              &none
                                            &none          &none             &none              &none       &none               &none
             >;
         };
@@ -135,10 +155,10 @@
 
         layer_4 {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &trans    &trans  &trans  &trans
+&none   &kp ESC  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&none   &kp TAB  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
