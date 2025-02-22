@@ -27,7 +27,6 @@
         };
     };
 
-
     combos {
         compatible = "zmk,combos";
 
@@ -50,6 +49,44 @@
             bindings = <&mkp MCLK>;
             key-positions = <26 27 28>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 20>;
+        };
+
+        Nav {
+            bindings = <&mo 3>;
+            key-positions = <16 15>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <22 21>;
+        };
+    };
+
+    macros {
+        BRACES: PGREP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "PGREP";
+        };
+
+        URL: URL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp PERIOD &kp RIGHT_BRACKET>;
+            label = "URL";
+        };
+
+        PREV: PREV {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DLLR &kp UNDER>;
+            label = "PREV";
+        };
     };
 
     keymap {
@@ -71,37 +108,30 @@
 &none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &kp BSPC  &none
 &none  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &none
 &none  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none     &none
-                       &kp N1  &none   &none     &none   &none   &none
+                       &none   &none   &none     &none   &none   &none
             >;
         };
 
-        bt_layer {
-            label = "BT-Nav";
+        bt_sym {
+            label = "BT-Sym";
             bindings = <
-&none  &kp LS(N1)    &kp LS(N2)    &kp LS(N3)    &kp LS(N4)    &kp LS(N5)    &kp LS(N6)      &kp LS(N7)      &kp LS(N8)    &kp LS(N9)       &kp LS(N0)  &none
-&none  &none         &none         &none         &none         &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none       &none
-&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR    &none           &none           &none         &none            &none       &none
-                                   &none         &none         &none         &none           &none           &none
+&none  &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp LS(EQUAL)  &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES           &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)  &none
+&none  &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV             &kp SLASH                 &URL                       &none
+&none  &bt BT_SEL 3     &bt BT_SEL 2       &bt BT_SEL 1   &bt BT_SEL 0      &bt BT_CLR         &kp PIPE    &URL                &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH              &none
+                                           &none          &none             &none              &none       &none               &none
             >;
         };
 
         arrow_layer {
             label = "Combo";
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
+&none  &none  &none  &none  &none  &none    &kp HOME        &kp PAGE_DOWN  &kp PG_UP  &kp END     &none  &none
+&none  &none  &none  &none  &none  &none    &kp LEFT_ARROW  &kp DOWN       &kp UP     &kp RIGHT   &none  &none
+&none  &none  &none  &none  &none  &none    &kp DELETE      &none          &none      &kp INSERT  &none  &none
+                     &none  &none  &none    &none           &none          &none
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        ComboLayers {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
