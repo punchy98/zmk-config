@@ -137,7 +137,7 @@
             label = "BT-Sym";
             bindings = <
 &none  &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp LS(EQUAL)  &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES           &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)  &none
-&none  &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV             &kp SLASH                 &URL                       &none
+&none  &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV             &kp SLASH                 &kp MINUS                  &none
 &none  &bt BT_SEL 2     &bt BT_SEL 1       &bt BT_SEL 0   &bt BT_PRV        &bt BT_NXT         &kp PIPE    &URL                &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH              &none
                                            &none          &none             &none              &none       &none               &none
             >;
