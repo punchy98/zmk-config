@@ -85,6 +85,11 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <1 29>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 14>;
+        };
     };
 
     macros {
