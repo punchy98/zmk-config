@@ -127,7 +127,7 @@
 
         num {
             bindings = <&tog 1>;
-            key-positions = <3 11>;
+            key-positions = <10 16>;
         };
     };
 
