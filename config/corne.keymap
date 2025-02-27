@@ -141,6 +141,11 @@
             bindings = <&mo 5>;
             key-positions = <10 1>;
         };
+
+        baselayer {
+            bindings = <&to 0>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
