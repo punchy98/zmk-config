@@ -115,7 +115,7 @@
         };
 
         mouselayer {
-            bindings = <&to 4>;
+            bindings = <&tog 4>;
             key-positions = <1 3>;
         };
 
@@ -176,12 +176,12 @@
             >;
         };
 
-        bt_sym {
+        symbol_layer {
             label = "Symbols";
             bindings = <
   &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp LS(EQUAL)  &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES           &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)
   &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV             &kp SLASH                 &URL
-  &bt BT_SEL 2     &bt BT_SEL 1       &bt BT_SEL 0   &bt BT_PRV        &bt BT_NXT         &kp PIPE    &kp MINUS           &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH
+  &none            &none              &none          &none             &none              &kp PIPE    &kp MINUS           &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH
                                       &none          &none             &none              &none       &none               &none
             >;
         };
@@ -209,10 +209,10 @@
 
         system_layer {
             bindings = <
-  &trans        &trans        &trans        &trans      &bootloader    &bootloader  &trans  &trans  &trans  &trans
-  &trans        &trans        &trans        &trans      &trans         &trans       &trans  &trans  &trans  &trans
-  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_PRV  &bt BT_NXT     &trans       &trans  &trans  &trans  &trans
-                              &trans        &trans      &trans         &trans       &trans  &trans
+  &trans        &trans          &trans             &trans           &bootloader    &bootloader  &trans  &trans  &trans  &trans
+  &trans        &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT       &trans         &trans       &trans  &trans  &trans  &trans
+  &bt BT_SEL 2  &bt BT_SEL 1    &bt BT_SEL 0       &bt BT_PRV       &bt BT_NXT     &trans       &trans  &trans  &trans  &trans
+                                &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans         &trans       &trans  &trans
             >;
 
             label = "System";
