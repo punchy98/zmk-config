@@ -149,6 +149,62 @@
             bindings = <&kp DLLR &kp UNDER>;
             label = "PREV";
         };
+
+        winClose: winClose {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F4)>;
+            label = "WINCLOSE";
+        };
+
+        tabNext: tabNext {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "TABNEXT";
+        };
+
+        tabPrev: tabPrev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(TAB))>;
+            label = "TABPREV";
+        };
+
+        tabClose: tabClose {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F4)>;
+            label = "TABCLOSE";
+        };
+
+        deskNext: deskNext {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(RIGHT))>;
+            label = "DESKNEXT";
+        };
+
+        deskPrev: deskPrev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LEFT))>;
+            label = "DESKPREV";
+        };
+
+        winNext: winNext {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(TAB)>;
+            label = "WINNEXT";
+        };
+
+        winPrev: winPrev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LS(TAB))>;
+            label = "WINPREV";
+        };
     };
 
     keymap {
@@ -177,9 +233,9 @@
         symbol_layer {
             label = "Symbols";
             bindings = <
-  &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp EQUAL      &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES           &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)
-  &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV             &kp SLASH                 &URL
-  &none            &none              &none          &kp GRAVE         &none              &kp PIPE    &kp MINUS           &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp BACKSLASH
+  &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp EQUAL      &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES            &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)
+  &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV              &kp SLASH                 &URL
+  &none            &none              &none          &kp GRAVE         &none              &kp PIPE    &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &none                     &kp BACKSLASH
                                       &none          &none             &none              &none       &none               &none
             >;
         };
@@ -187,10 +243,10 @@
         nav_layer {
             label = "Nav";
             bindings = <
-  &kp LG(Q)           &kp LG(W)           &kp LG(E)             &kp LG(R)        &kp LG(T)    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END     &none
-  &mt LEFT_GUI LG(A)  &mt LEFT_ALT LG(S)  &mt LEFT_SHIFT LG(D)  &mt LCTRL LG(F)  &kp LG(G)    &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT   &none
-  &kp LG(Z)           &kp LG(X)           &kp LG(C)             &kp LG(V)        &kp LG(B)    &kp DELETE      &msc SCRL_DOWN  &msc SCRL_UP  &kp INSERT  &none
-                                          &none                 &none            &none        &none           &none           &none
+  &none  &tabPrev   &tabNext   &tabClose  &none    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END     &none
+  &none  &winPrev   &winNext   &winClose  &none    &kp LEFT_ARROW  &kp DOWN        &kp UP        &kp RIGHT   &none
+  &none  &deskPrev  &deskNext  &none      &none    &kp DELETE      &msc SCRL_DOWN  &msc SCRL_UP  &kp INSERT  &none
+                    &none      &none      &none    &none           &none           &none
             >;
         };
 
