@@ -52,6 +52,13 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp UNDERSCORE>;
         };
+
+        capsword: capsword {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPSWORD";
+            #binding-cells = <0>;
+            continue-list = <UNDERSCORE MINUS>;
+        };
     };
 
     combos {
@@ -223,10 +230,10 @@
         number_layer {
             label = "Number";
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7     &kp N8      &kp N9  &kp BACKSPACE
-  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4     &kp N5      &kp N6  &kp N0
-  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1     &kp N2      &kp N3  &trans
-                  &trans  &trans  &trans    &trans  &kp ENTER  &kp PERIOD
+  &trans  &trans  &trans  &trans     &trans    &trans  &kp N7     &kp N8      &kp N9  &trans
+  &trans  &trans  &trans  &trans     &trans    &trans  &kp N4     &kp N5      &kp N6  &kp N0
+  &trans  &trans  &trans  &trans     &trans    &trans  &kp N1     &kp N2      &kp N3  &trans
+                  &trans  &capsword  &trans    &trans  &kp ENTER  &kp PERIOD
             >;
         };
 
@@ -236,7 +243,7 @@
   &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp EQUAL      &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES            &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)
   &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV              &kp SLASH                 &URL
   &none            &none              &none          &kp GRAVE         &none              &kp PIPE    &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &none                     &kp BACKSLASH
-                                      &none          &none             &none              &none       &none               &none
+                                      &none          &kp TILDE         &none              &none       &none               &none
             >;
         };
 
