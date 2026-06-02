@@ -220,20 +220,20 @@
         default_layer {
             label = "Home";
             bindings = <
-  &kp Q           &kp W           &kp E             &kp R        &kp T                         &kp Y                       &kp U                 &kp I                    &kp O            &kp P
-  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &hm LA(LC(LS(LEFT_GUI))) G    &hm LS(LC(LA(LEFT_GUI))) H  &hm RCTRL J           &hm RIGHT_SHIFT K        &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON
-  &kp Z           &kp X           &kp C             &kp V        &kp B                         &kp N                       &kp M                 &kp COMMA                &kp DOT          &kp SLASH
-                                  &lt 2 TAB         &lt 3 SPACE  &num_word 1                   &lt 2 BACKSPACE             &mt LEFT_SHIFT ENTER  &hold_tap LG(LS(S)) SQT
+  &kp Q           &kp W           &kp E             &kp R        &kp T                         &kp Y                       &kp U                 &kp I                      &kp O            &kp P
+  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &hm LA(LC(LS(LEFT_GUI))) G    &hm LS(LC(LA(LEFT_GUI))) H  &hm RCTRL J           &hm RIGHT_SHIFT K          &hm RIGHT_ALT L  &hm RIGHT_GUI SEMICOLON
+  &kp Z           &kp X           &kp C             &kp V        &kp B                         &kp N                       &kp M                 &kp COMMA                  &kp DOT          &kp SLASH
+                                  &lt 2 TAB         &lt 3 SPACE  &num_word 1                   &lt 2 BACKSPACE             &mt LEFT_SHIFT ENTER  &hold_tap RIGHT_SHIFT SQT
             >;
         };
 
         number_layer {
             label = "Number";
             bindings = <
-  &trans  &trans  &trans     &trans  &trans    &trans  &kp N7     &kp N8      &kp N9  &trans
-  &trans  &trans  &trans     &trans  &trans    &trans  &kp N4     &kp N5      &kp N6  &kp N0
-  &trans  &trans  &trans     &trans  &trans    &trans  &kp N1     &kp N2      &kp N3  &trans
-                  &capsword  &trans  &trans    &trans  &kp ENTER  &kp PERIOD
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7     &kp N8      &kp N9  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp N4     &kp N5      &kp N6  &kp N0
+  &trans  &trans  &trans  &trans  &trans    &trans  &kp N1     &kp N2      &kp N3  &trans
+                  &trans  &trans  &trans    &trans  &kp ENTER  &kp PERIOD
             >;
         };
 
@@ -243,7 +243,7 @@
   &kp LS(AT_SIGN)  &kp LS(AMPERSAND)  &kp EQUAL      &kp PLUS          &kp LS(PERCENT)    &kp CARET   &kp LS(UNDERSCORE)  &BRACES            &kp LS(LEFT_PARENTHESIS)  &kp LS(RIGHT_PARENTHESIS)
   &kp EXCL         &kp TILDE          &kp LESS_THAN  &kp GREATER_THAN  &kp HASH           &kp DOLLAR  &kp ASTERISK        &PREV              &kp SLASH                 &URL
   &none            &none              &none          &kp GRAVE         &none              &kp PIPE    &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &none                     &kp BACKSLASH
-                                      &none          &kp TILDE         &none              &none       &none               &none
+                                      &none          &kp TILDE         &capsword          &none       &none               &none
             >;
         };
 
